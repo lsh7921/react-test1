@@ -31,12 +31,12 @@
   "main": "eslint.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lsh7921/test.git"
+    "url": "git+https://github.com/lsh7921/react-test1.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lsh7921/test/issues"
+    "url": "https://github.com/lsh7921/react-test1/issues"
   },
-  "homepage": "https://github.com/lsh7921/test#readme"
+  "homepage": "https://github.com/lsh7921/react-test1#readme"
 }

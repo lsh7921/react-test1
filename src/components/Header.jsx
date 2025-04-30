@@ -25,7 +25,7 @@ function Header(){
   return(
     <HeaderWrapper>
       <Nav>
-        <StyledLink to="/react-test1">홈</StyledLink>
+        <StyledLink to="/">홈</StyledLink>
         <StyledLink to="/about">회사소개</StyledLink>
         <StyledLink to="/freeboard">자유게시판</StyledLink>
       </Nav>

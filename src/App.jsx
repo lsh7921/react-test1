@@ -28,14 +28,12 @@ function App(){
     <Container>
       <Header />
       <Content>
-        <Router>
-          <Routes>
-            <Route path="/react-test1" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/freeboard" element={<Freeboard />} />
-          </Routes>
-        </Router>
-      </Content>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/freeboard" element={<Freeboard />} />
+        </Routes>
+    </Content>
       <Footer />
     </Container>
   )
