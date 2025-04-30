@@ -62,7 +62,7 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
   &:hover{
     text-decoration:underline;
   }
-`;function cp(){return st.jsx(up,{children:st.jsxs(ip,{children:[st.jsx(Tr,{to:"/",children:"홈"}),st.jsx(Tr,{to:"/about",children:"회사소개"}),st.jsx(Tr,{to:"/freeboard",children:"자유게시판"})]})})}const fp=Qe.footer`
+`;function cp(){return st.jsx(up,{children:st.jsxs(ip,{children:[st.jsx(Tr,{to:"/home",children:"홈"}),st.jsx(Tr,{to:"/about",children:"회사소개"}),st.jsx(Tr,{to:"/freeboard",children:"자유게시판"})]})})}const fp=Qe.footer`
   background:#eee;
   padding:20px;
   text-align:center;
@@ -85,4 +85,4 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
 `,Sp=Qe.main`
   flex:1;
   padding:20px;
-`;function bp(){return st.jsxs(pp,{children:[st.jsx(cp,{}),st.jsx(Sp,{children:st.jsxs(T1,{children:[st.jsx(Mi,{path:"/",element:st.jsx(dp,{})}),st.jsx(Mi,{path:"/about",element:st.jsx(hp,{})}),st.jsx(Mi,{path:"/freeboard",element:st.jsx(gp,{})})]})}),st.jsx(rp,{})]})}Cv.createRoot(document.getElementById("root")).render(st.jsx(C.StrictMode,{children:st.jsx(J1,{children:st.jsx(bp,{})})}));
+`;function bp(){return st.jsxs(pp,{children:[st.jsx(cp,{}),st.jsx(Sp,{children:st.jsx(J1,{children:st.jsxs(T1,{children:[st.jsx(Mi,{path:"/home",element:st.jsx(dp,{})}),st.jsx(Mi,{path:"/about",element:st.jsx(hp,{})}),st.jsx(Mi,{path:"/freeboard",element:st.jsx(gp,{})})]})})}),st.jsx(rp,{})]})}Cv.createRoot(document.getElementById("root")).render(st.jsx(C.StrictMode,{children:st.jsx(bp,{})}));

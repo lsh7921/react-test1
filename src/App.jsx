@@ -28,9 +28,9 @@ function App(){
     <Container>
       <Header />
       <Content>
-        <Router basename="/react-test1">
+        <Router>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/react-test1" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/freeboard" element={<Freeboard />} />
           </Routes>
