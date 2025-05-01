@@ -7,7 +7,7 @@ import App from './App'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename="/react-test1">
      <App />
     </BrowserRouter>
   </StrictMode>
