@@ -1,7 +1,29 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-// 사이즈별 스타일 정의
+// 색상 테마 정의
+const variants = {
+  primary: css`
+    background-color: #0d6efd;
+    &:hover:enabled {
+      background-color: #0b5ed7;
+    }
+  `,
+  secondary: css`
+    background-color: #6c757d;
+    &:hover:enabled {
+      background-color: #5c636a;
+    }
+  `,
+  cancel: css`
+    background-color: #dc3545;
+    &:hover:enabled {
+      background-color: #bb2d3b;
+    }
+  `,
+};
+
+// 사이즈 정의
 const sizes = {
   LG: css`
     padding: 12px 24px;
@@ -9,46 +31,21 @@ const sizes = {
   `,
   MD: css`
     padding: 10px 20px;
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   `,
   SM: css`
     padding: 8px 16px;
-    font-size: 0.5rem;
+    font-size: 0.75rem;
   `,
 };
 
-// 스타일드 컴포넌트
-const StyledButton = styled.button`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  background-color: ${(props) => (props.disabled ? "#ccc" : "#007bff")};
-  color: white;
-  transition: background-color 0.3s;
-  ${(props) => sizes[props.size || "MD"]};
-
-  &:hover:enabled {
-    background-color: #0056b3;
-  }
-
-  &:focus-visible {
-    outline: 3px solid #80bdff;
-    outline-offset: 2px;
-  }
-
-  ${(props) =>
-    props.loading &&
-    css`
-      pointer-events: none;
-      opacity: 0.6;
-    `}
+// 버튼 그룹
+export const ButtonGroup = styled.div`
+  display: flex;
+  gap: 15px;
 `;
 
-// 로딩 스피너 대체 텍스트
+// 스피너
 const Spinner = styled.span`
   margin-left: 8px;
   width: 1em;
@@ -65,10 +62,44 @@ const Spinner = styled.span`
   }
 `;
 
+// 스타일드 버튼
+const StyledButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  ${(props) => sizes[props.$size || "MD"]}
+  ${(props) => variants[props.$variant || "primary"]}
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: 3px solid #80bdff;
+    outline-offset: 2px;
+  }
+
+  ${(props) =>
+    props.$loading &&
+    css`
+      pointer-events: none;
+      opacity: 0.6;
+    `}
+`;
+
 // 버튼 컴포넌트
 const Button = ({
   children,
   size = "MD",
+  variant = "primary",
   disabled = false,
   loading = false,
   type = "button",
@@ -80,13 +111,12 @@ const Button = ({
   return (
     <StyledButton
       type={type}
-      size={size}
+      $size={size}
+      $variant={variant}
+      $loading={loading}
       disabled={disabled || loading}
-      loading={loading}
       aria-label={ariaLabel}
       aria-busy={loading}
-      role="button"
-      tabIndex={0}
       onClick={onClick}
     >
       {iconLeft && <span style={{ marginRight: 8 }}>{iconLeft}</span>}

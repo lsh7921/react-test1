@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import About from './pages/About';
-import Freeboard from './pages/Freeboard';
+import Menu1 from './pages/Menu1';
+import Menu2 from './pages/Menu2';
 import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
+import { reset } from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -36,13 +36,15 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="freeboard" element={<Freeboard />} />
-        </Route>
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="menu1" element={<Menu1 />} />
+            <Route path="menu2" element={<Menu2 />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

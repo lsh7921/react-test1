@@ -5,7 +5,7 @@ import MobileMenu from './MobileMenu';
 import viteLogo from '../../public/vite.svg';
 
 const HeaderWrapper = styled.header`
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background: #333;
@@ -15,6 +15,7 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  z-index:2;
 
   @media (max-width: 768px) {
     padding: 15px;
@@ -57,8 +58,8 @@ function Header() {
       <div><img src={viteLogo} className="logo" alt="vite logo" /> Logo</div>
       <Nav>
         <StyledNavLink to="/" end>홈</StyledNavLink>
-        <StyledNavLink to="/about">회사소개</StyledNavLink>
-        <StyledNavLink to="/freeboard">자유게시판</StyledNavLink>
+        <StyledNavLink to="/menu1">menu1</StyledNavLink>
+        <StyledNavLink to="/menu2">menu2</StyledNavLink>
       </Nav>
       <Hamburger onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? '닫기' : '메뉴'}

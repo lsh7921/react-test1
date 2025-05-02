@@ -32,8 +32,8 @@ function MobileMenu({ setMenuOpen }) {
   return (
     <MenuWrapper>
       <StyledNavLink to="/" end onClick={handleClick}>홈</StyledNavLink>
-      <StyledNavLink to="/about" onClick={handleClick}>회사소개</StyledNavLink>
-      <StyledNavLink to="/freeboard" onClick={handleClick}>자유게시판</StyledNavLink>
+      <StyledNavLink to="/menu1" onClick={handleClick}>menu1</StyledNavLink>
+      <StyledNavLink to="/menu2" onClick={handleClick}>menu2</StyledNavLink>
     </MenuWrapper>
   );
 }

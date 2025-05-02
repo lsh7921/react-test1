@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 
-function About() {
+function Menu2() {
   useEffect(() => {
-    document.title = "회사소개 | MySite";
+    document.title = "menu2 | MySite";
   }, []);
 
   return (
     <div>
-      <h1>회사소개</h1>
+      <h1>menu2</h1>
     </div>
   );
 }
 
-export default About;
+export default Menu2;
