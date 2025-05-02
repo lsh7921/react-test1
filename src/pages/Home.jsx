@@ -73,7 +73,7 @@ const Input = styled.input`${inputStyles}`;
 const Select = styled.select`
   ${inputStyles}
   appearance:none;
-  background-image:url('../../src/assets/ic_arr_down.png');
+  background-image:url('/ic_arr_down.png');
   background-repeat:no-repeat;
   background-size:14px;
   background-position:calc(100% - 15px) center;

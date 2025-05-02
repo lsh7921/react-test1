@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import MobileMenu from './MobileMenu';
-import viteLogo from '../../public/vite.svg';
+import viteLogo from '/vite.svg';
 
 const HeaderWrapper = styled.header`
   position: sticky;

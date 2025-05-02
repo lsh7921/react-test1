@@ -29,7 +29,12 @@ const GlobalStyle = createGlobalStyle`
     all: unset;
     cursor: pointer;
   }
-  .logo{display:inline-block;align-content:bottom;width:16px;height:16px;}
+  .logo{
+    display:inline-block;
+    align-content:bottom;
+    width:16px;
+    height:16px;
+  }
 `;
 
 function App() {  
