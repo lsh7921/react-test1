@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Modal from '../components/Modal';
 import reactLogo from '/react.svg';
-import icArrDown from './assets/ic_arr_down.png';
+import icArrDown from '/ic_arr_down.png';
 import {
   CheckIcon,
   ArrowRightIcon,
