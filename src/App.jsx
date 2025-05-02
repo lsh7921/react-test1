@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <BrowserRouter>
+      <BrowserRouter basename="/react-test1">
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
