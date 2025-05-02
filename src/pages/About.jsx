@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-function About(){
-  return(
-    <h1>소개 페이지</h1>
-  )
+function About() {
+  useEffect(() => {
+    document.title = "회사소개 | MySite";
+  }, []);
+
+  return (
+    <div>
+      <h1>회사소개</h1>
+    </div>
+  );
 }
 
 export default About;

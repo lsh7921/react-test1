@@ -10,7 +10,7 @@ const FooterWrapper = styled.footer`
 function Footer(){
   return(
     <FooterWrapper>
-      © 2025 test website. All rights reserved.
+      © 2025 react website. All rights reserved.
     </FooterWrapper>
   )
 }

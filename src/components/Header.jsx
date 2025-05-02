@@ -1,36 +1,71 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import MobileMenu from './MobileMenu';
+import viteLogo from '../../public/vite.svg';
 
 const HeaderWrapper = styled.header`
-  background:#333;
-  padding:20px;
-  color:#fff;
-`;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 
-const Nav = styled.nav`
-  display:flex;
-  gap:20px;
-`;
-
-const StyledLink = styled(Link)`
-  color:#fff;
-  text-decoration:none;
-  &:hover{
-    text-decoration:underline;
+  @media (max-width: 768px) {
+    padding: 15px;
   }
 `;
 
-function Header(){
-  return(
+const Nav = styled.nav`
+  display: flex;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const StyledNavLink = styled(NavLink)`
+  color: #fff;
+  text-decoration: none;
+
+  &.active {
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+  }
+`;
+
+const Hamburger = styled.div`
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
     <HeaderWrapper>
+      <div><img src={viteLogo} className="logo" alt="vite logo" /> Logo</div>
       <Nav>
-        <StyledLink to="/">홈</StyledLink>
-        <StyledLink to="/about">회사소개</StyledLink>
-        <StyledLink to="/freeboard">자유게시판</StyledLink>
+        <StyledNavLink to="/" end>홈</StyledNavLink>
+        <StyledNavLink to="/about">회사소개</StyledNavLink>
+        <StyledNavLink to="/freeboard">자유게시판</StyledNavLink>
       </Nav>
+      <Hamburger onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? '닫기' : '메뉴'}
+      </Hamburger>
+      {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
     </HeaderWrapper>
-  )
+  );
 }
 
 export default Header;
