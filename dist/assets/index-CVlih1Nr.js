@@ -544,4 +544,4 @@ table {
     cursor: pointer;
   }
   .logo{display:inline-block;align-content:bottom;width:16px;height:16px;}
-`;function Lae(){return ne.jsxs(ne.Fragment,{children:[ne.jsx(jae,{}),ne.jsx(m4,{children:ne.jsx(GB,{children:ne.jsxs(Cc,{path:"/",element:ne.jsx(L6,{}),children:[ne.jsx(Cc,{index:!0,element:ne.jsx(kae,{})}),ne.jsx(Cc,{path:"menu1",element:ne.jsx(Rae,{})}),ne.jsx(Cc,{path:"menu2",element:ne.jsx(Nae,{})})]})})})]})}ZI.createRoot(document.getElementById("root")).render(ne.jsx(N.StrictMode,{children:ne.jsx(Lae,{})}));
+`;function Lae(){return ne.jsxs(ne.Fragment,{children:[ne.jsx(jae,{}),ne.jsx(m4,{basename:"/react-test1",children:ne.jsx(GB,{children:ne.jsxs(Cc,{path:"/",element:ne.jsx(L6,{}),children:[ne.jsx(Cc,{index:!0,element:ne.jsx(kae,{})}),ne.jsx(Cc,{path:"menu1",element:ne.jsx(Rae,{})}),ne.jsx(Cc,{path:"menu2",element:ne.jsx(Nae,{})})]})})})]})}ZI.createRoot(document.getElementById("root")).render(ne.jsx(N.StrictMode,{children:ne.jsx(Lae,{})}));
