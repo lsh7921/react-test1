@@ -8,7 +8,7 @@ function Menu1() {
 
   return (
     <div>
-      <h1>차트 테스트</h1>
+      <h1>차트 테스트 </h1>
       <Chart/>
     </div>
   );

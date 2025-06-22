@@ -9,7 +9,7 @@ const Chart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('public/fee.json');
+        const response = await fetch('public/fee.json');//json 경로
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -64,7 +64,7 @@ const Chart = () => {
             className={styles.legendColor} 
             style={{ backgroundColor: '#4e79a7' }} 
           />
-          <span className={styles.legendText}>통신요금 (원)</span>
+          <span className={styles.legendText}>통신요금(원)</span>
         </div>
       </div>
     </div>
