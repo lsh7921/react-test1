@@ -60,6 +60,7 @@ function Header() {
         <StyledNavLink to="/" end>홈</StyledNavLink>
         <StyledNavLink to="/menu1">menu1</StyledNavLink>
         <StyledNavLink to="/menu2">menu2</StyledNavLink>
+        <StyledNavLink to="/menu3">menu3</StyledNavLink>
       </Nav>
       <Hamburger onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? '닫기' : '메뉴'}

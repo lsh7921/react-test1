@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Menu1 from './pages/Menu1';
 import Menu2 from './pages/Menu2';
+import Menu3 from './pages/Menu3';
 import { createGlobalStyle } from 'styled-components';
 import { reset } from 'styled-reset';
 
@@ -47,6 +48,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="menu1" element={<Menu1 />} />
             <Route path="menu2" element={<Menu2 />} />
+            <Route path="menu3" element={<Menu3 />} />
           </Route>
         </Routes>
       </HashRouter>
