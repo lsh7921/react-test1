@@ -38,6 +38,13 @@ const sizes = {
     font-size: 0.75rem;
   `,
 };
+const icons = {
+  plus: '+',
+  minus: '-',
+  check: '✓',
+  close: '×',
+};
+
 
 // 버튼 그룹
 export const ButtonGroup = styled.div`
@@ -73,6 +80,7 @@ const StyledButton = styled.button`
   color: #fff;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  min-width: 2.5em;
 
   ${(props) => sizes[props.$size || "MD"]}
   ${(props) => variants[props.$variant || "primary"]}
@@ -95,19 +103,21 @@ const StyledButton = styled.button`
     `}
 `;
 
+
 // 버튼 컴포넌트
 const Button = ({
   children,
   size = "MD",
   variant = "primary",
+  iconType,
   disabled = false,
   loading = false,
   type = "button",
   ariaLabel,
   onClick,
-  iconLeft,
-  iconRight,
 }) => {
+  const icon = icons[iconType] ?? '';
+
   return (
     <StyledButton
       type={type}
@@ -115,14 +125,17 @@ const Button = ({
       $variant={variant}
       $loading={loading}
       disabled={disabled || loading}
-      aria-label={ariaLabel}
+      aria-label={ariaLabel ?? (icon && !children ? icon : undefined)}
       aria-busy={loading}
       onClick={onClick}
     >
-      {iconLeft && <span style={{ marginRight: 8 }}>{iconLeft}</span>}
+      {!loading && icon && (
+        <span style={{ marginRight: children ? 8 : 0 }} aria-hidden="true">
+          {icon}
+        </span>
+      )}
       {children}
       {loading && <Spinner aria-hidden="true" />}
-      {iconRight && <span style={{ marginLeft: 8 }}>{iconRight}</span>}
     </StyledButton>
   );
 };
