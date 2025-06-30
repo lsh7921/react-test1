@@ -9,7 +9,7 @@ const Chart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('public/fee.json');//json 경로
+        const response = await fetch('./fee.json');//json 경로
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
