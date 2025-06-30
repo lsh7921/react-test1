@@ -24,7 +24,9 @@ function Menu2() {
         <div>state:{count2}</div>
         <button className={`${styles.btnCalc} ${styles.icoPlus}`} onClick={increase}>증가</button>
         <div>      
-          <Button size="SM" variant="primary" iconType="plus" onClick={increase}>증가</Button>
+          <Button size="SM" variant="primary" iconType="plus" onClick={increase}>증가1</Button>
+          <Button size="SM" variant="primary" iconType="plus" onClick={increase}>증가2</Button>
+          <Button size="SM" variant="primary" iconType="plus" onClick={increase}>증가3</Button>
         </div>  
       </section>
     </div>
